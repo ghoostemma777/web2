@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto - Academia de Danza</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f4fb;
+      background-image: url(logo%20danza.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(240, 240, 248, 0.85);
+      z-index: -1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b8005c;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #b8005c;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff007f;
+    }
+
+    section {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      color: #b8005c;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    /* Estilo para enlaces tipo botón */
+    .boton {
+      display: inline-block;
+      background-color: #b8005c;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #ff007f;
+    }
+
+    .fecha-nacimiento {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .fecha-nacimiento select {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contáctanos</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="clases.html">Clases</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Formulario 1: Inscripción -->
+  <section>
+    <h2>Formulario de Inscripción</h2>
+    <form>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label>Fecha de nacimiento:</label>
+      <div class="fecha-nacimiento">
+        <select id="dia" name="dia" required>
+          <option value="">Día</option>
+          <script>
+            for (let d = 1; d <= 31; d++) {
+              document.write('<option value="' + d + '">' + d + '</option>');
+            }
+          </script>
+        </select>
+
+        <select id="mes" name="mes" required>
+          <option value="">Mes</option>
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+
+        <select id="ano" name="ano" required>
+          <option value="">Año</option>
+          <script>
+            const currentYear = new Date().getFullYear();
+            for (let y = currentYear - 5; y >= currentYear - 80; y--) {
+              document.write('<option value="' + y + '">' + y + '</option>');
+            }
+          </script>
+        </select>
+      </div>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" />
+
+      <label for="estilo">Estilo de danza:</label>
+      <select id="estilo" name="estilo">
+        <option value="ballet">Ballet</option>
+        <option value="jazz">Jazz</option>
+        <option value="hiphop">Hip Hop</option>
+        <option value="contemporaneo">Contemporáneo</option>
+        <option value="salsa">Salsa</option>
+        <option value="kpop">K-Pop</option>
+      </select>
+
+      <a href="REGISTRO.html" class="boton">Enviar inscripción</a>
+    </form>
+  </section>
+
+  <!-- Formulario 2: Clases privadas -->
+  <section>
+    <h2>Solicitar Clase Privada</h2>
+    <form>
+      <label for="privado-nombre">Nombre:</label>
+      <input type="text" id="privado-nombre" name="privado-nombre" required />
+
+      <label for="privado-email">Correo electrónico:</label>
+      <input type="email" id="privado-email" name="privado-email" required />
+
+      <label for="privado-estilo">Estilo de interés:</label>
+      <input type="text" id="privado-estilo" name="privado-estilo" />
+
+      <label for="privado-fecha">Fecha preferida:</label>
+      <input type="date" id="privado-fecha" name="privado-fecha" required />
+
+      <label for="privado-hora">Horario disponible:</label>
+      <select id="privado-hora" name="privado-hora" required>
+        <option value="">Selecciona una hora</option>
+        <option value="09:00">9:00 AM</option>
+        <option value="10:00">10:00 AM</option>
+        <option value="11:00">11:00 AM</option>
+        <option value="13:00">1:00 PM</option>
+        <option value="15:00">3:00 PM</option>
+        <option value="17:00">5:00 PM</option>
+        <option value="19:00">7:00 PM</option>
+      </select>
+
+      <a href="REGISTRO.html" class="boton">Solicitar clase privada</a>
+    </form>
+  </section>
+
+  <!-- Formulario 3: Comentarios -->
+  <section>
+    <h2>Comentarios o Sugerencias</h2>
+    <form>
+      <label for="comentario-nombre">Nombre (opcional):</label>
+      <input type="text" id="comentario-nombre" name="comentario-nombre" />
+
+      <label for="comentario">Escribe tu comentario:</label>
+      <textarea id="comentario" name="comentario" rows="5" placeholder="Nos encanta mejorar..."></textarea>
+
+      <a href="REGISTRO.html" class="boton">Enviar comentario</a>
+    </form>
+  </section>
+
+</body>
+</html>

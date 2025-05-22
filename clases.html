@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clases - Academia de Danza</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f4fb;
+      background-image: url(logo%20danza.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(240, 240, 248, 0.85);
+      z-index: -1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b8005c;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #b8005c;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff007f;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 40px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      color: #b8005c;
+      margin-top: 0;
+    }
+
+    .dance-style {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .dance-style video {
+      max-width: 320px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(184, 0, 92, 0.7);
+    }
+
+    .description {
+      flex: 1;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffe5f1;
+      color: #b8005c;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1e4f7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nuestras Clases</h1>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="clases.html">Clases</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Sección de tipos de clases -->
+  <section>
+    <h2>Estilos de danza disponibles</h2>
+    <ul>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="BALLET.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>Ballet clásico</strong>
+          <p>El ballet es una forma de danza elegante que combina la precisión técnica con una expresión artística refinada. Ideal para mejorar postura, flexibilidad y disciplina corporal.</p>
+        </div>
+      </li>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="bachata.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>Bachata</strong>
+          <p>La bachata es un estilo de baile sensual y romántico originario de República Dominicana, con movimientos suaves y pasos en pareja que transmiten conexión y ritmo.</p>
+        </div>
+      </li>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="hip hop.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>Hip Hop</strong>
+          <p>El Hip Hop es una danza urbana enérgica y expresiva que permite a los bailarines mostrar creatividad a través de movimientos rápidos, acrobáticos y llenos de actitud.</p>
+        </div>
+      </li>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="danza moderna.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>Danza Moderna</strong>
+          <p>La danza moderna se basa en la libertad de movimiento y la emoción. Ideal para quienes desean expresarse a través del cuerpo con fluidez y autenticidad.</p>
+        </div>
+      </li>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="salsa.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>Salsa</strong>
+          <p>La salsa es una danza vibrante y energética con raíces latinas, perfecta para mejorar la coordinación, el ritmo y disfrutar en pareja o en grupo.</p>
+        </div>
+      </li>
+      <li class="dance-style">
+        <video controls muted preload="metadata">
+          <source src="kpop.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+          <strong>K-Pop</strong>
+          <p>Inspirado en los grupos coreanos, el K-Pop combina movimientos precisos con coreografías llamativas, ideal para quienes buscan modernidad, sincronía y dinamismo.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Sección de horarios -->
+  <section>
+    <h2>Horarios de Clases Grupales</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>Clase</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lunes</td>
+          <td>Bachata</td>
+          <td>10:00 AM</td>
+        </tr>
+        <tr>
+          <td>Martes</td>
+          <td>Ballet</td>
+          <td>9:00 AM</td>
+        </tr>
+        <tr>
+          <td>Miércoles</td>
+          <td>Hip Hop</td>
+          <td>11:00 AM</td>
+        </tr>
+        <tr>
+          <td>Jueves</td>
+          <td>Moderno</td>
+          <td>1:00 PM</td>
+        </tr>
+        <tr>
+          <td>Viernes</td>
+          <td>Salsa</td>
+          <td>3:00 PM</td>
+        </tr>
+        <tr>
+          <td>Sábado</td>
+          <td>K-Pop</td>
+          <td>11:00 AM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
